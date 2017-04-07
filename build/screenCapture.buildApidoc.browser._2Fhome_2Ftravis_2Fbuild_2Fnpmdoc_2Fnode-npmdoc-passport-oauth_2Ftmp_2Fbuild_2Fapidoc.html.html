@@ -1,0 +1,1605 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/jaredhanson/passport-oauth#readme">passport-oauth (v1.0.0)</a>
+</h1>
+<h4>OAuth 1.0 and 2.0 authentication strategies for Passport.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-oauth">module passport-oauth</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.InternalOAuthError">
+            function <span class="apidocSignatureSpan">passport-oauth.</span>InternalOAuthError
+            <span class="apidocSignatureSpan">(message, err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuth2Strategy">
+            function <span class="apidocSignatureSpan">passport-oauth.</span>OAuth2Strategy
+            <span class="apidocSignatureSpan">(options, verify)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuth2Strategy.InternalOAuthError">
+            function <span class="apidocSignatureSpan">passport-oauth.</span>OAuth2Strategy.InternalOAuthError
+            <span class="apidocSignatureSpan">(message, err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuth2Strategy.super_">
+            function <span class="apidocSignatureSpan">passport-oauth.</span>OAuth2Strategy.super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuthStrategy">
+            function <span class="apidocSignatureSpan">passport-oauth.</span>OAuthStrategy
+            <span class="apidocSignatureSpan">(options, verify)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">passport-oauth.</span>InternalOAuthError.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">passport-oauth.</span>OAuth2Strategy.InternalOAuthError.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">passport-oauth.</span>OAuth2Strategy.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">passport-oauth.</span>OAuth2Strategy.super_.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">passport-oauth.</span>OAuthStrategy.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-oauth.InternalOAuthError">module passport-oauth.InternalOAuthError</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.InternalOAuthError.InternalOAuthError">
+            function <span class="apidocSignatureSpan">passport-oauth.</span>InternalOAuthError
+            <span class="apidocSignatureSpan">(message, err)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-oauth.InternalOAuthError.prototype">module passport-oauth.InternalOAuthError.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.InternalOAuthError.prototype.toString">
+            function <span class="apidocSignatureSpan">passport-oauth.InternalOAuthError.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-oauth.OAuth2Strategy">module passport-oauth.OAuth2Strategy</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuth2Strategy.OAuth2Strategy">
+            function <span class="apidocSignatureSpan">passport-oauth.</span>OAuth2Strategy
+            <span class="apidocSignatureSpan">(options, verify)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuth2Strategy.AuthorizationError">
+            function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.</span>AuthorizationError
+            <span class="apidocSignatureSpan">(message, code, uri, status)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuth2Strategy.InternalOAuthError">
+            function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.</span>InternalOAuthError
+            <span class="apidocSignatureSpan">(message, err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuth2Strategy.Strategy">
+            function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.</span>Strategy
+            <span class="apidocSignatureSpan">(options, verify)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuth2Strategy.TokenError">
+            function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.</span>TokenError
+            <span class="apidocSignatureSpan">(message, code, uri, status)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuth2Strategy.super_">
+            function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-oauth.OAuth2Strategy.InternalOAuthError">module passport-oauth.OAuth2Strategy.InternalOAuthError</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuth2Strategy.InternalOAuthError.InternalOAuthError">
+            function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.</span>InternalOAuthError
+            <span class="apidocSignatureSpan">(message, err)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-oauth.OAuth2Strategy.InternalOAuthError.prototype">module passport-oauth.OAuth2Strategy.InternalOAuthError.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuth2Strategy.InternalOAuthError.prototype.toString">
+            function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.InternalOAuthError.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-oauth.OAuth2Strategy.prototype">module passport-oauth.OAuth2Strategy.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuth2Strategy.prototype._createOAuthError">
+            function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.prototype.</span>_createOAuthError
+            <span class="apidocSignatureSpan">(message, err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuth2Strategy.prototype._loadUserProfile">
+            function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.prototype.</span>_loadUserProfile
+            <span class="apidocSignatureSpan">(accessToken, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuth2Strategy.prototype.authenticate">
+            function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.prototype.</span>authenticate
+            <span class="apidocSignatureSpan">(req, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuth2Strategy.prototype.authorizationParams">
+            function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.prototype.</span>authorizationParams
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuth2Strategy.prototype.parseErrorResponse">
+            function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.prototype.</span>parseErrorResponse
+            <span class="apidocSignatureSpan">(body, status)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuth2Strategy.prototype.tokenParams">
+            function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.prototype.</span>tokenParams
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuth2Strategy.prototype.userProfile">
+            function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.prototype.</span>userProfile
+            <span class="apidocSignatureSpan">(accessToken, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-oauth.OAuth2Strategy.super_">module passport-oauth.OAuth2Strategy.super_</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuth2Strategy.super_.super_">
+            function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuth2Strategy.super_.Strategy">
+            function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.super_.</span>Strategy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-oauth.OAuth2Strategy.super_.prototype">module passport-oauth.OAuth2Strategy.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuth2Strategy.super_.prototype.authenticate">
+            function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.super_.prototype.</span>authenticate
+            <span class="apidocSignatureSpan">(req, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-oauth.OAuthStrategy">module passport-oauth.OAuthStrategy</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuthStrategy.OAuthStrategy">
+            function <span class="apidocSignatureSpan">passport-oauth.</span>OAuthStrategy
+            <span class="apidocSignatureSpan">(options, verify)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuthStrategy.InternalOAuthError">
+            function <span class="apidocSignatureSpan">passport-oauth.OAuthStrategy.</span>InternalOAuthError
+            <span class="apidocSignatureSpan">(message, err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuthStrategy.Strategy">
+            function <span class="apidocSignatureSpan">passport-oauth.OAuthStrategy.</span>Strategy
+            <span class="apidocSignatureSpan">(options, verify)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuthStrategy.super_">
+            function <span class="apidocSignatureSpan">passport-oauth.OAuthStrategy.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-oauth.OAuthStrategy.prototype">module passport-oauth.OAuthStrategy.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuthStrategy.prototype._createOAuthError">
+            function <span class="apidocSignatureSpan">passport-oauth.OAuthStrategy.prototype.</span>_createOAuthError
+            <span class="apidocSignatureSpan">(message, err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuthStrategy.prototype._loadUserProfile">
+            function <span class="apidocSignatureSpan">passport-oauth.OAuthStrategy.prototype.</span>_loadUserProfile
+            <span class="apidocSignatureSpan">(token, tokenSecret, params, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuthStrategy.prototype.authenticate">
+            function <span class="apidocSignatureSpan">passport-oauth.OAuthStrategy.prototype.</span>authenticate
+            <span class="apidocSignatureSpan">(req, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuthStrategy.prototype.parseErrorResponse">
+            function <span class="apidocSignatureSpan">passport-oauth.OAuthStrategy.prototype.</span>parseErrorResponse
+            <span class="apidocSignatureSpan">(body, status)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuthStrategy.prototype.requestTokenParams">
+            function <span class="apidocSignatureSpan">passport-oauth.OAuthStrategy.prototype.</span>requestTokenParams
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuthStrategy.prototype.userAuthorizationParams">
+            function <span class="apidocSignatureSpan">passport-oauth.OAuthStrategy.prototype.</span>userAuthorizationParams
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-oauth.OAuthStrategy.prototype.userProfile">
+            function <span class="apidocSignatureSpan">passport-oauth.OAuthStrategy.prototype.</span>userProfile
+            <span class="apidocSignatureSpan">(token, tokenSecret, params, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-oauth" id="apidoc.module.passport-oauth">module passport-oauth</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.InternalOAuthError" id="apidoc.element.passport-oauth.InternalOAuthError">
+        function <span class="apidocSignatureSpan">passport-oauth.</span>InternalOAuthError
+        <span class="apidocSignatureSpan">(message, err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InternalOAuthError(message, err) {
+  Error.call(this);
+  Error.captureStackTrace(this, this.constructor);
+  this.name = this.constructor.name;
+  this.message = message;
+  this.oauthError = err;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuth2Strategy" id="apidoc.element.passport-oauth.OAuth2Strategy">
+        function <span class="apidocSignatureSpan">passport-oauth.</span>OAuth2Strategy
+        <span class="apidocSignatureSpan">(options, verify)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function OAuth2Strategy(options, verify) {
+  if (typeof options == 'function') {
+    verify = options;
+    options = undefined;
+  }
+  options = options || {};
+
+  if (!verify) { throw new TypeError('OAuth2Strategy requires a verify callback'); }
+  if (!options.authorizationURL) { throw new TypeError('OAuth2Strategy requires a authorizationURL option'); }
+  if (!options.tokenURL) { throw new TypeError('OAuth2Strategy requires a tokenURL option'); }
+  if (!options.clientID) { throw new TypeError('OAuth2Strategy requires a clientID option'); }
+
+  passport.Strategy.call(this);
+  this.name = 'oauth2';
+  this._verify = verify;
+
+  // NOTE: The _oauth2 property is considered "protected".  Subclasses are
+  //       allowed to use it when making protected resource requests to retrieve
+  //       the user profile.
+  this._oauth2 = new OAuth2(options.clientID,  options.clientSecret,
+      '', options.authorizationURL, options.tokenURL, options.customHeaders);
+
+  this._callbackURL = options.callbackURL;
+  this._scope = options.scope;
+  this._scopeSeparator = options.scopeSeparator || ' ';
+  this._key = options.sessionKey || ('oauth2:' + url.parse(options.authorizationURL).hostname);
+
+  if (options.store) {
+    this._stateStore = options.store;
+  } else {
+    if (options.state) {
+      this._stateStore = new SessionStateStore({ key: this._key });
+    } else {
+      this._stateStore = new NullStateStore();
+    }
+  }
+  this._trustProxy = options.proxy;
+  this._passReqToCallback = options.passReqToCallback;
+  this._skipUserProfile = (options.skipUserProfile === undefined) ? false : options.skipUserProfile;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuth2Strategy.InternalOAuthError" id="apidoc.element.passport-oauth.OAuth2Strategy.InternalOAuthError">
+        function <span class="apidocSignatureSpan">passport-oauth.</span>OAuth2Strategy.InternalOAuthError
+        <span class="apidocSignatureSpan">(message, err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InternalOAuthError(message, err) {
+  Error.call(this);
+  Error.captureStackTrace(this, this.constructor);
+  this.name = this.constructor.name;
+  this.message = message;
+  this.oauthError = err;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuth2Strategy.super_" id="apidoc.element.passport-oauth.OAuth2Strategy.super_">
+        function <span class="apidocSignatureSpan">passport-oauth.</span>OAuth2Strategy.super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuthStrategy" id="apidoc.element.passport-oauth.OAuthStrategy">
+        function <span class="apidocSignatureSpan">passport-oauth.</span>OAuthStrategy
+        <span class="apidocSignatureSpan">(options, verify)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function OAuthStrategy(options, verify) {
+  if (typeof options == 'function') {
+    verify = options;
+    options = undefined;
+  }
+  options = options || {};
+
+  if (!verify) { throw new TypeError('OAuthStrategy requires a verify callback'); }
+  if (!options.requestTokenURL) { throw new TypeError('OAuthStrategy requires a requestTokenURL option'); }
+  if (!options.accessTokenURL) { throw new TypeError('OAuthStrategy requires a accessTokenURL option'); }
+  if (!options.userAuthorizationURL) { throw new TypeError('OAuthStrategy requires a userAuthorizationURL option'); }
+  if (!options.consumerKey) { throw new TypeError('OAuthStrategy requires a consumerKey option'); }
+  if (options.consumerSecret === undefined) { throw new TypeError('OAuthStrategy requires a consumerSecret option'); }
+
+  passport.Strategy.call(this);
+  this.name = 'oauth';
+  this._verify = verify;
+
+  // NOTE: The _oauth property is considered "protected".  Subclasses are
+  //       allowed to use it when making protected resource requests to retrieve
+  //       the user profile.
+  this._oauth = new OAuth(options.requestTokenURL, options.accessTokenURL,
+                          options.consumerKey,  options.consumerSecret,
+                          '1.0', null, options.signatureMethod || 'HMAC-SHA1',
+                          null, options.customHeaders);
+
+  this._userAuthorizationURL = options.userAuthorizationURL;
+  this._callbackURL = options.callbackURL;
+  this._key = options.sessionKey || 'oauth';
+  this._requestTokenStore = options.requestTokenStore || new SessionRequestTokenStore({ key: this._key });
+  this._trustProxy = options.proxy;
+  this._passReqToCallback = options.passReqToCallback;
+  this._skipUserProfile = (options.skipUserProfile === undefined) ? false : options.skipUserProfile;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-oauth.InternalOAuthError" id="apidoc.module.passport-oauth.InternalOAuthError">module passport-oauth.InternalOAuthError</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.InternalOAuthError.InternalOAuthError" id="apidoc.element.passport-oauth.InternalOAuthError.InternalOAuthError">
+        function <span class="apidocSignatureSpan">passport-oauth.</span>InternalOAuthError
+        <span class="apidocSignatureSpan">(message, err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InternalOAuthError(message, err) {
+  Error.call(this);
+  Error.captureStackTrace(this, this.constructor);
+  this.name = this.constructor.name;
+  this.message = message;
+  this.oauthError = err;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-oauth.InternalOAuthError.prototype" id="apidoc.module.passport-oauth.InternalOAuthError.prototype">module passport-oauth.InternalOAuthError.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.InternalOAuthError.prototype.toString" id="apidoc.element.passport-oauth.InternalOAuthError.prototype.toString">
+        function <span class="apidocSignatureSpan">passport-oauth.InternalOAuthError.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+  var m = this.name;
+  if (this.message) { m += ': ' + this.message; }
+  if (this.oauthError) {
+    if (this.oauthError instanceof Error) {
+      m = this.oauthError.toString();
+    } else if (this.oauthError.statusCode &amp;&amp; this.oauthError.data) {
+      m += ' (status: ' + this.oauthError.statusCode + ' data: ' + this.oauthError.data + ')';
+    }
+  }
+  return m;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-oauth.OAuth2Strategy" id="apidoc.module.passport-oauth.OAuth2Strategy">module passport-oauth.OAuth2Strategy</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuth2Strategy.OAuth2Strategy" id="apidoc.element.passport-oauth.OAuth2Strategy.OAuth2Strategy">
+        function <span class="apidocSignatureSpan">passport-oauth.</span>OAuth2Strategy
+        <span class="apidocSignatureSpan">(options, verify)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function OAuth2Strategy(options, verify) {
+  if (typeof options == 'function') {
+    verify = options;
+    options = undefined;
+  }
+  options = options || {};
+
+  if (!verify) { throw new TypeError('OAuth2Strategy requires a verify callback'); }
+  if (!options.authorizationURL) { throw new TypeError('OAuth2Strategy requires a authorizationURL option'); }
+  if (!options.tokenURL) { throw new TypeError('OAuth2Strategy requires a tokenURL option'); }
+  if (!options.clientID) { throw new TypeError('OAuth2Strategy requires a clientID option'); }
+
+  passport.Strategy.call(this);
+  this.name = 'oauth2';
+  this._verify = verify;
+
+  // NOTE: The _oauth2 property is considered "protected".  Subclasses are
+  //       allowed to use it when making protected resource requests to retrieve
+  //       the user profile.
+  this._oauth2 = new OAuth2(options.clientID,  options.clientSecret,
+      '', options.authorizationURL, options.tokenURL, options.customHeaders);
+
+  this._callbackURL = options.callbackURL;
+  this._scope = options.scope;
+  this._scopeSeparator = options.scopeSeparator || ' ';
+  this._key = options.sessionKey || ('oauth2:' + url.parse(options.authorizationURL).hostname);
+
+  if (options.store) {
+    this._stateStore = options.store;
+  } else {
+    if (options.state) {
+      this._stateStore = new SessionStateStore({ key: this._key });
+    } else {
+      this._stateStore = new NullStateStore();
+    }
+  }
+  this._trustProxy = options.proxy;
+  this._passReqToCallback = options.passReqToCallback;
+  this._skipUserProfile = (options.skipUserProfile === undefined) ? false : options.skipUserProfile;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuth2Strategy.AuthorizationError" id="apidoc.element.passport-oauth.OAuth2Strategy.AuthorizationError">
+        function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.</span>AuthorizationError
+        <span class="apidocSignatureSpan">(message, code, uri, status)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function AuthorizationError(message, code, uri, status) {
+  if (!status) {
+    switch (code) {
+      case 'access_denied': status = 403; break;
+      case 'server_error': status = 502; break;
+      case 'temporarily_unavailable': status = 503; break;
+    }
+  }
+
+  Error.call(this);
+  Error.captureStackTrace(this, this.constructor);
+  this.name = this.constructor.name;
+  this.message = message;
+  this.code = code || 'server_error';
+  this.uri = uri;
+  this.status = status || 500;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuth2Strategy.InternalOAuthError" id="apidoc.element.passport-oauth.OAuth2Strategy.InternalOAuthError">
+        function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.</span>InternalOAuthError
+        <span class="apidocSignatureSpan">(message, err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InternalOAuthError(message, err) {
+  Error.call(this);
+  Error.captureStackTrace(this, this.constructor);
+  this.name = this.constructor.name;
+  this.message = message;
+  this.oauthError = err;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuth2Strategy.Strategy" id="apidoc.element.passport-oauth.OAuth2Strategy.Strategy">
+        function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.</span>Strategy
+        <span class="apidocSignatureSpan">(options, verify)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function OAuth2Strategy(options, verify) {
+  if (typeof options == 'function') {
+    verify = options;
+    options = undefined;
+  }
+  options = options || {};
+
+  if (!verify) { throw new TypeError('OAuth2Strategy requires a verify callback'); }
+  if (!options.authorizationURL) { throw new TypeError('OAuth2Strategy requires a authorizationURL option'); }
+  if (!options.tokenURL) { throw new TypeError('OAuth2Strategy requires a tokenURL option'); }
+  if (!options.clientID) { throw new TypeError('OAuth2Strategy requires a clientID option'); }
+
+  passport.Strategy.call(this);
+  this.name = 'oauth2';
+  this._verify = verify;
+
+  // NOTE: The _oauth2 property is considered "protected".  Subclasses are
+  //       allowed to use it when making protected resource requests to retrieve
+  //       the user profile.
+  this._oauth2 = new OAuth2(options.clientID,  options.clientSecret,
+      '', options.authorizationURL, options.tokenURL, options.customHeaders);
+
+  this._callbackURL = options.callbackURL;
+  this._scope = options.scope;
+  this._scopeSeparator = options.scopeSeparator || ' ';
+  this._key = options.sessionKey || ('oauth2:' + url.parse(options.authorizationURL).hostname);
+
+  if (options.store) {
+    this._stateStore = options.store;
+  } else {
+    if (options.state) {
+      this._stateStore = new SessionStateStore({ key: this._key });
+    } else {
+      this._stateStore = new NullStateStore();
+    }
+  }
+  this._trustProxy = options.proxy;
+  this._passReqToCallback = options.passReqToCallback;
+  this._skipUserProfile = (options.skipUserProfile === undefined) ? false : options.skipUserProfile;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuth2Strategy.TokenError" id="apidoc.element.passport-oauth.OAuth2Strategy.TokenError">
+        function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.</span>TokenError
+        <span class="apidocSignatureSpan">(message, code, uri, status)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function TokenError(message, code, uri, status) {
+  Error.call(this);
+  Error.captureStackTrace(this, this.constructor);
+  this.name = this.constructor.name;
+  this.message = message;
+  this.code = code || 'invalid_request';
+  this.uri = uri;
+  this.status = status || 500;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuth2Strategy.super_" id="apidoc.element.passport-oauth.OAuth2Strategy.super_">
+        function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-oauth.OAuth2Strategy.InternalOAuthError" id="apidoc.module.passport-oauth.OAuth2Strategy.InternalOAuthError">module passport-oauth.OAuth2Strategy.InternalOAuthError</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuth2Strategy.InternalOAuthError.InternalOAuthError" id="apidoc.element.passport-oauth.OAuth2Strategy.InternalOAuthError.InternalOAuthError">
+        function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.</span>InternalOAuthError
+        <span class="apidocSignatureSpan">(message, err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InternalOAuthError(message, err) {
+  Error.call(this);
+  Error.captureStackTrace(this, this.constructor);
+  this.name = this.constructor.name;
+  this.message = message;
+  this.oauthError = err;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-oauth.OAuth2Strategy.InternalOAuthError.prototype" id="apidoc.module.passport-oauth.OAuth2Strategy.InternalOAuthError.prototype">module passport-oauth.OAuth2Strategy.InternalOAuthError.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuth2Strategy.InternalOAuthError.prototype.toString" id="apidoc.element.passport-oauth.OAuth2Strategy.InternalOAuthError.prototype.toString">
+        function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.InternalOAuthError.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+  var m = this.name;
+  if (this.message) { m += ': ' + this.message; }
+  if (this.oauthError) {
+    if (this.oauthError instanceof Error) {
+      m = this.oauthError.toString();
+    } else if (this.oauthError.statusCode &amp;&amp; this.oauthError.data) {
+      m += ' (status: ' + this.oauthError.statusCode + ' data: ' + this.oauthError.data + ')';
+    }
+  }
+  return m;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-oauth.OAuth2Strategy.prototype" id="apidoc.module.passport-oauth.OAuth2Strategy.prototype">module passport-oauth.OAuth2Strategy.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuth2Strategy.prototype._createOAuthError" id="apidoc.element.passport-oauth.OAuth2Strategy.prototype._createOAuthError">
+        function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.prototype.</span>_createOAuthError
+        <span class="apidocSignatureSpan">(message, err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_createOAuthError = function (message, err) {
+  var e;
+  if (err.statusCode &amp;&amp; err.data) {
+    try {
+      e = this.parseErrorResponse(err.data, err.statusCode);
+    } catch (_) {}
+  }
+  if (!e) { e = new InternalOAuthError(message, err); }
+  return e;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuth2Strategy.prototype._loadUserProfile" id="apidoc.element.passport-oauth.OAuth2Strategy.prototype._loadUserProfile">
+        function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.prototype.</span>_loadUserProfile
+        <span class="apidocSignatureSpan">(accessToken, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_loadUserProfile = function (accessToken, done) {
+  var self = this;
+
+  function loadIt() {
+    return self.userProfile(accessToken, done);
+  }
+  function skipIt() {
+    return done(null);
+  }
+
+  if (typeof this._skipUserProfile == 'function' &amp;&amp; this._skipUserProfile.length &gt; 1) {
+    // async
+    this._skipUserProfile(accessToken, function(err, skip) {
+      if (err) { return done(err); }
+      if (!skip) { return loadIt(); }
+      return skipIt();
+    });
+  } else {
+    var skip = (typeof this._skipUserProfile == 'function') ? this._skipUserProfile() : this._skipUserProfile;
+    if (!skip) { return loadIt(); }
+    return skipIt();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuth2Strategy.prototype.authenticate" id="apidoc.element.passport-oauth.OAuth2Strategy.prototype.authenticate">
+        function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.prototype.</span>authenticate
+        <span class="apidocSignatureSpan">(req, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">authenticate = function (req, options) {
+  options = options || {};
+  var self = this;
+
+  if (req.query &amp;&amp; req.query.error) {
+    if (req.query.error == 'access_denied') {
+      return this.fail({ message: req.query.error_description });
+    } else {
+      return this.error(new AuthorizationError(req.query.error_description, req.query.error, req.query.error_uri));
+    }
+  }
+
+  var callbackURL = options.callbackURL || this._callbackURL;
+  if (callbackURL) {
+    var parsed = url.parse(callbackURL);
+    if (!parsed.protocol) {
+      // The callback URL is relative, resolve a fully qualified URL from the
+      // URL of the originating request.
+      callbackURL = url.resolve(utils.originalURL(req, { proxy: this._trustProxy }), callbackURL);
+    }
+  }
+
+  var meta = {
+    authorizationURL: this._oauth2._authorizeUrl,
+    tokenURL: this._oauth2._accessTokenUrl,
+    clientID: this._oauth2._clientId
+  }
+
+  if (req.query &amp;&amp; req.query.code) {
+    function loaded(err, ok, state) {
+      if (err) { return self.error(err); }
+      if (!ok) {
+        return self.fail(state, 403);
+      }
+
+      var code = req.query.code;
+
+      var params = self.tokenParams(options);
+      params.grant_type = 'authorization_code';
+      if (callbackURL) { params.redirect_uri = callbackURL; }
+
+      self._oauth2.getOAuthAccessToken(code, params,
+        function(err, accessToken, refreshToken, params) {
+          if (err) { return self.error(self._createOAuthError('Failed to obtain access token', err)); }
+
+          self._loadUserProfile(accessToken, function(err, profile) {
+            if (err) { return self.error(err); }
+
+            function verified(err, user, info) {
+              if (err) { return self.error(err); }
+              if (!user) { return self.fail(info); }
+
+              info = info || {};
+              if (state) { info.state = state; }
+              self.success(user, info);
+            }
+
+            try {
+              if (self._passReqToCallback) {
+                var arity = self._verify.length;
+                if (arity == 6) {
+                  self._verify(req, accessToken, refreshToken, params, profile, verified);
+                } else { // arity == 5
+                  self._verify(req, accessToken, refreshToken, profile, verified);
+                }
+              } else {
+                var arity = self._verify.length;
+                if (arity == 5) {
+                  self._verify(accessToken, refreshToken, params, profile, verified);
+                } else { // arity == 4
+                  self._verify(accessToken, refreshToken, profile, verified);
+                }
+              }
+            } catch (ex) {
+              return self.error(ex);
+            }
+          });
+        }
+      );
+    }
+
+    var state = req.query.state;
+    try {
+      var arity = this._stateStore.verify.length;
+      if (arity == 4) {
+        this._stateStore.verify(req, state, meta, loaded);
+      } else { // arity == 3
+        this._stateStore.verify(req, state, loaded);
+      }
+    } catch (ex) {
+      return this.error(ex);
+    }
+  } else {
+    var params = this.authorizationParams(options);
+    params.response_type = 'code';
+    if (callbackURL) { params.redirect_uri = callbackURL; }
+    var scope = options.scope || this._scope;
+    if (scope) {
+      if (Array.isArray(scope)) { scope = scope.join(this._scopeSeparator); }
+      params.scope = scope;
+    }
+
+    var state = options.state;
+    if (state) {
+      params.state = state;
+
+      var parsed = url.parse(this._oauth2._authorizeUrl, true);
+      utils.merge(parsed.query, params);
+      parsed.query['client_id'] = this._oauth2._clientId;
+      delete parsed.search;
+      var location = url.format(parsed);
+      this.redirect(location);
+    } else {
+      function stored(err, state) {
+        if (err) { return self.error(err); }
+
+        if (state) { params.state = state; }
+        var parsed = url.parse(self._oauth2._authorizeUrl, true);
+        utils.merge(parsed.query, params);
+        parsed.query['client_id'] = self._oauth2._clientId;
+        delete parsed.search; ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuth2Strategy.prototype.authorizationParams" id="apidoc.element.passport-oauth.OAuth2Strategy.prototype.authorizationParams">
+        function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.prototype.</span>authorizationParams
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">authorizationParams = function (options) {
+  return {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuth2Strategy.prototype.parseErrorResponse" id="apidoc.element.passport-oauth.OAuth2Strategy.prototype.parseErrorResponse">
+        function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.prototype.</span>parseErrorResponse
+        <span class="apidocSignatureSpan">(body, status)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parseErrorResponse = function (body, status) {
+  var json = JSON.parse(body);
+  if (json.error) {
+    return new TokenError(json.error_description, json.error, json.error_uri);
+  }
+  return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuth2Strategy.prototype.tokenParams" id="apidoc.element.passport-oauth.OAuth2Strategy.prototype.tokenParams">
+        function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.prototype.</span>tokenParams
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">tokenParams = function (options) {
+  return {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuth2Strategy.prototype.userProfile" id="apidoc.element.passport-oauth.OAuth2Strategy.prototype.userProfile">
+        function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.prototype.</span>userProfile
+        <span class="apidocSignatureSpan">(accessToken, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">userProfile = function (accessToken, done) {
+  return done(null, {});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-oauth.OAuth2Strategy.super_" id="apidoc.module.passport-oauth.OAuth2Strategy.super_">module passport-oauth.OAuth2Strategy.super_</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuth2Strategy.super_.super_" id="apidoc.element.passport-oauth.OAuth2Strategy.super_.super_">
+        function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuth2Strategy.super_.Strategy" id="apidoc.element.passport-oauth.OAuth2Strategy.super_.Strategy">
+        function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.super_.</span>Strategy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-oauth.OAuth2Strategy.super_.prototype" id="apidoc.module.passport-oauth.OAuth2Strategy.super_.prototype">module passport-oauth.OAuth2Strategy.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuth2Strategy.super_.prototype.authenticate" id="apidoc.element.passport-oauth.OAuth2Strategy.super_.prototype.authenticate">
+        function <span class="apidocSignatureSpan">passport-oauth.OAuth2Strategy.super_.prototype.</span>authenticate
+        <span class="apidocSignatureSpan">(req, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">authenticate = function (req, options) {
+  throw new Error('Strategy#authenticate must be overridden by subclass');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-oauth.OAuthStrategy" id="apidoc.module.passport-oauth.OAuthStrategy">module passport-oauth.OAuthStrategy</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuthStrategy.OAuthStrategy" id="apidoc.element.passport-oauth.OAuthStrategy.OAuthStrategy">
+        function <span class="apidocSignatureSpan">passport-oauth.</span>OAuthStrategy
+        <span class="apidocSignatureSpan">(options, verify)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function OAuthStrategy(options, verify) {
+  if (typeof options == 'function') {
+    verify = options;
+    options = undefined;
+  }
+  options = options || {};
+
+  if (!verify) { throw new TypeError('OAuthStrategy requires a verify callback'); }
+  if (!options.requestTokenURL) { throw new TypeError('OAuthStrategy requires a requestTokenURL option'); }
+  if (!options.accessTokenURL) { throw new TypeError('OAuthStrategy requires a accessTokenURL option'); }
+  if (!options.userAuthorizationURL) { throw new TypeError('OAuthStrategy requires a userAuthorizationURL option'); }
+  if (!options.consumerKey) { throw new TypeError('OAuthStrategy requires a consumerKey option'); }
+  if (options.consumerSecret === undefined) { throw new TypeError('OAuthStrategy requires a consumerSecret option'); }
+
+  passport.Strategy.call(this);
+  this.name = 'oauth';
+  this._verify = verify;
+
+  // NOTE: The _oauth property is considered "protected".  Subclasses are
+  //       allowed to use it when making protected resource requests to retrieve
+  //       the user profile.
+  this._oauth = new OAuth(options.requestTokenURL, options.accessTokenURL,
+                          options.consumerKey,  options.consumerSecret,
+                          '1.0', null, options.signatureMethod || 'HMAC-SHA1',
+                          null, options.customHeaders);
+
+  this._userAuthorizationURL = options.userAuthorizationURL;
+  this._callbackURL = options.callbackURL;
+  this._key = options.sessionKey || 'oauth';
+  this._requestTokenStore = options.requestTokenStore || new SessionRequestTokenStore({ key: this._key });
+  this._trustProxy = options.proxy;
+  this._passReqToCallback = options.passReqToCallback;
+  this._skipUserProfile = (options.skipUserProfile === undefined) ? false : options.skipUserProfile;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuthStrategy.InternalOAuthError" id="apidoc.element.passport-oauth.OAuthStrategy.InternalOAuthError">
+        function <span class="apidocSignatureSpan">passport-oauth.OAuthStrategy.</span>InternalOAuthError
+        <span class="apidocSignatureSpan">(message, err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InternalOAuthError(message, err) {
+  Error.call(this);
+  Error.captureStackTrace(this, this.constructor);
+  this.name = this.constructor.name;
+  this.message = message;
+  this.oauthError = err;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuthStrategy.Strategy" id="apidoc.element.passport-oauth.OAuthStrategy.Strategy">
+        function <span class="apidocSignatureSpan">passport-oauth.OAuthStrategy.</span>Strategy
+        <span class="apidocSignatureSpan">(options, verify)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function OAuthStrategy(options, verify) {
+  if (typeof options == 'function') {
+    verify = options;
+    options = undefined;
+  }
+  options = options || {};
+
+  if (!verify) { throw new TypeError('OAuthStrategy requires a verify callback'); }
+  if (!options.requestTokenURL) { throw new TypeError('OAuthStrategy requires a requestTokenURL option'); }
+  if (!options.accessTokenURL) { throw new TypeError('OAuthStrategy requires a accessTokenURL option'); }
+  if (!options.userAuthorizationURL) { throw new TypeError('OAuthStrategy requires a userAuthorizationURL option'); }
+  if (!options.consumerKey) { throw new TypeError('OAuthStrategy requires a consumerKey option'); }
+  if (options.consumerSecret === undefined) { throw new TypeError('OAuthStrategy requires a consumerSecret option'); }
+
+  passport.Strategy.call(this);
+  this.name = 'oauth';
+  this._verify = verify;
+
+  // NOTE: The _oauth property is considered "protected".  Subclasses are
+  //       allowed to use it when making protected resource requests to retrieve
+  //       the user profile.
+  this._oauth = new OAuth(options.requestTokenURL, options.accessTokenURL,
+                          options.consumerKey,  options.consumerSecret,
+                          '1.0', null, options.signatureMethod || 'HMAC-SHA1',
+                          null, options.customHeaders);
+
+  this._userAuthorizationURL = options.userAuthorizationURL;
+  this._callbackURL = options.callbackURL;
+  this._key = options.sessionKey || 'oauth';
+  this._requestTokenStore = options.requestTokenStore || new SessionRequestTokenStore({ key: this._key });
+  this._trustProxy = options.proxy;
+  this._passReqToCallback = options.passReqToCallback;
+  this._skipUserProfile = (options.skipUserProfile === undefined) ? false : options.skipUserProfile;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuthStrategy.super_" id="apidoc.element.passport-oauth.OAuthStrategy.super_">
+        function <span class="apidocSignatureSpan">passport-oauth.OAuthStrategy.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-oauth.OAuthStrategy.prototype" id="apidoc.module.passport-oauth.OAuthStrategy.prototype">module passport-oauth.OAuthStrategy.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuthStrategy.prototype._createOAuthError" id="apidoc.element.passport-oauth.OAuthStrategy.prototype._createOAuthError">
+        function <span class="apidocSignatureSpan">passport-oauth.OAuthStrategy.prototype.</span>_createOAuthError
+        <span class="apidocSignatureSpan">(message, err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_createOAuthError = function (message, err) {
+  var e;
+  if (err.statusCode &amp;&amp; err.data) {
+    try {
+      e = this.parseErrorResponse(err.data, err.statusCode);
+    } catch (_) {}
+  }
+  if (!e) { e = new InternalOAuthError(message, err); }
+  return e;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuthStrategy.prototype._loadUserProfile" id="apidoc.element.passport-oauth.OAuthStrategy.prototype._loadUserProfile">
+        function <span class="apidocSignatureSpan">passport-oauth.OAuthStrategy.prototype.</span>_loadUserProfile
+        <span class="apidocSignatureSpan">(token, tokenSecret, params, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_loadUserProfile = function (token, tokenSecret, params, done) {
+  var self = this;
+
+  function loadIt() {
+    return self.userProfile(token, tokenSecret, params, done);
+  }
+  function skipIt() {
+    return done(null);
+  }
+
+  if (typeof this._skipUserProfile == 'function' &amp;&amp; this._skipUserProfile.length &gt; 1) {
+    // async
+    this._skipUserProfile(token, tokenSecret, function(err, skip) {
+      if (err) { return done(err); }
+      if (!skip) { return loadIt(); }
+      return skipIt();
+    });
+  } else {
+    var skip = (typeof this._skipUserProfile == 'function') ? this._skipUserProfile() : this._skipUserProfile;
+    if (!skip) { return loadIt(); }
+    return skipIt();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuthStrategy.prototype.authenticate" id="apidoc.element.passport-oauth.OAuthStrategy.prototype.authenticate">
+        function <span class="apidocSignatureSpan">passport-oauth.OAuthStrategy.prototype.</span>authenticate
+        <span class="apidocSignatureSpan">(req, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">authenticate = function (req, options) {
+  options = options || {};
+
+  var self = this;
+  var meta = {
+    requestTokenURL: this._oauth._requestUrl,
+    accessTokenURL: this._oauth._accessUrl,
+    userAuthorizationURL:  this._userAuthorizationURL,
+    consumerKey: this._oauth._consumerKey
+  }
+
+  if (req.query &amp;&amp; req.query.oauth_token) {
+    // The request being authenticated contains an oauth_token parameter in the
+    // query portion of the URL.  This indicates that the service provider has
+    // redirected the user back to the application, after authenticating the
+    // user and obtaining their authorization.
+    //
+    // The value of the oauth_token parameter is the request token.  Together
+    // with knowledge of the token secret (stored in the session), the request
+    // token can be exchanged for an access token and token secret.
+    //
+    // This access token and token secret, along with the optional ability to
+    // fetch profile information from the service provider, is sufficient to
+    // establish the identity of the user.
+    var oauthToken = req.query.oauth_token;
+
+    function loaded(err, oauthTokenSecret, state) {
+      if (err) { return self.error(err); }
+      if (!oauthTokenSecret) {
+        return self.fail(state, 403);
+      }
+
+      // NOTE: The oauth_verifier parameter will be supplied in the query portion
+      //       of the redirect URL, if the server supports OAuth 1.0a.
+      var oauthVerifier = req.query.oauth_verifier || null;
+
+      self._oauth.getOAuthAccessToken(oauthToken, oauthTokenSecret, oauthVerifier, function(err, token, tokenSecret, params) {
+        if (err) { return self.error(self._createOAuthError('Failed to obtain access token', err)); }
+
+        function destroyed(err) {
+          if (err) { return self.error(err); }
+
+          self._loadUserProfile(token, tokenSecret, params, function(err, profile) {
+            if (err) { return self.error(err); }
+
+            function verified(err, user, info) {
+              if (err) { return self.error(err); }
+              if (!user) { return self.fail(info); }
+
+              info = info || {};
+              if (state) { info.state = state; }
+              self.success(user, info);
+            }
+
+            try {
+              if (self._passReqToCallback) {
+                var arity = self._verify.length;
+                if (arity == 6) {
+                  self._verify(req, token, tokenSecret, params, profile, verified);
+                } else { // arity == 5
+                  self._verify(req, token, tokenSecret, profile, verified);
+                }
+              } else {
+                var arity = self._verify.length;
+                if (arity == 5) {
+                  self._verify(token, tokenSecret, params, profile, verified);
+                } else { // arity == 4
+                  self._verify(token, tokenSecret, profile, verified);
+                }
+              }
+            } catch (ex) {
+              return self.error(ex);
+            }
+          });
+        }
+
+        // The request token has been exchanged for an access token.  Since the
+        // request token is a single-use token, that data can be removed from the
+        // store.
+        try {
+          var arity = self._requestTokenStore.destroy.length;
+          if (arity == 4) {
+            self._requestTokenStore.destroy(req, oauthToken, meta, destroyed);
+          } else { // arity == 3
+            self._requestTokenStore.destroy(req, oauthToken, destroyed);
+          }
+        } catch (ex) {
+          return self.error(ex);
+        }
+      });
+    }
+
+    try {
+      var arity = self._requestTokenStore.get.length;
+      if (arity == 4) {
+        this._requestTokenStore.get(req, oauthToken, meta, loaded);
+      } else { // arity == 3
+        this._requestTokenStore.get(req, oauthToken, loaded);
+      }
+    } catch (ex) {
+      return this.error(ex);
+    }
+  } else {
+    // In order to authenticate via OAuth, the application must obtain a request
+    // token from the service provider and redirect th ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuthStrategy.prototype.parseErrorResponse" id="apidoc.element.passport-oauth.OAuthStrategy.prototype.parseErrorResponse">
+        function <span class="apidocSignatureSpan">passport-oauth.OAuthStrategy.prototype.</span>parseErrorResponse
+        <span class="apidocSignatureSpan">(body, status)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parseErrorResponse = function (body, status) {
+  return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuthStrategy.prototype.requestTokenParams" id="apidoc.element.passport-oauth.OAuthStrategy.prototype.requestTokenParams">
+        function <span class="apidocSignatureSpan">passport-oauth.OAuthStrategy.prototype.</span>requestTokenParams
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">requestTokenParams = function (options) {
+  return {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuthStrategy.prototype.userAuthorizationParams" id="apidoc.element.passport-oauth.OAuthStrategy.prototype.userAuthorizationParams">
+        function <span class="apidocSignatureSpan">passport-oauth.OAuthStrategy.prototype.</span>userAuthorizationParams
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">userAuthorizationParams = function (options) {
+  return {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-oauth.OAuthStrategy.prototype.userProfile" id="apidoc.element.passport-oauth.OAuthStrategy.prototype.userProfile">
+        function <span class="apidocSignatureSpan">passport-oauth.OAuthStrategy.prototype.</span>userProfile
+        <span class="apidocSignatureSpan">(token, tokenSecret, params, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">userProfile = function (token, tokenSecret, params, done) {
+  return done(null, {});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
